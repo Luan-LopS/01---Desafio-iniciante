@@ -1,0 +1,207 @@
+:root{
+
+    --background1: hsl(252, 100%, 67%);
+    --background2: hsl(241, 81%, 54%);
+    
+    --circle1: hsla(256, 72%, 46%, 1);
+    --circle2: hsla(241, 72%, 46%, 0);
+
+    /*cor do questionario*/
+    --reaction: hsl(0, 100%, 67%);
+    --memory: hsl(39, 100%, 56%);
+    --verbal: hsl(166, 100%, 37%);
+    --visual: hsl(234, 85%, 45%);
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body{
+    font-size: 18px;
+}
+
+.card{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 375px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 20px  hsla(234, 86%, 16%, 0.151);
+    border-radius: 20px 20px 20px 20px;
+}
+
+.your-result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(to top, var(--background2), var(--background1));
+    border-radius: 0 0 20px 20px;
+    padding-bottom: 15px;
+}
+
+.container{
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.your-result h4{
+    padding: 25px;
+    color: hsl(241, 100%, 89%);
+}
+
+.result-number{
+    position: relative;
+    z-index: 2;
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, var(--circle1), var(--circle2));
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#result-total{
+    position: relative;
+    right: -6px;
+    top: 5px;
+    color: hsla(241, 100%, 89%, 0.651);
+}
+
+#result-total span{
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--White);
+}
+
+.your-result p{
+    width: 90%;
+    margin: 15px 0px 30px 0px;
+    text-align: center;
+    font-size: 16px;
+    color: hsla(241, 100%, 89%, 0.788);
+}
+
+.summary{
+  padding: 20px; 
+}
+
+.result{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 15px 0; 
+}
+
+.content{
+    display: flex;
+    padding: 0 10px;
+}
+
+.total{
+    color: hsla(224, 30%, 27%, 0.459);
+    font-size: 16px;
+    font-weight: 800;
+    
+}
+
+.total span{
+    color: hsla(224, 30%, 27%, 0.938);
+
+}
+
+.content h4{
+    padding-left: 10px;
+}
+
+.reaction{
+    background-color: hsl(0, 100%, 67%, 0.0);
+}
+
+.memory{
+    background-color: hsl(39, 100%, 56%, 0.08);
+}
+
+.verbal{
+    background-color: hsl(166, 100%, 37%, 0.06);
+}
+
+.visual{
+    background: hsla(234, 85%, 45%, 0.06);
+}
+
+.reaction h4{
+    color: var(--reaction);
+}
+
+.memory h4{
+    color: var(--memory);
+}
+
+.verbal h4{
+    color: var(--verbal);
+}
+
+.visual h4{
+    color: var(--visual);
+}
+
+.btn{
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    font-size: 800;
+}
+
+.btn:hover{
+    background: linear-gradient(to top, var(--background2), var(--background1));
+    cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 850px) {
+    .card{
+        position: relative;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, 30%);
+        width: 600px;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 10px 10px 20px  hsla(234, 86%, 16%, 0.151);
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    .your-result{
+        width: 47%;
+        border-radius: 20px 20px 20px 20px;
+        padding-bottom: 15px;
+    }
+
+    .summary{
+       width: 44%;
+    
+    }
+
+}
